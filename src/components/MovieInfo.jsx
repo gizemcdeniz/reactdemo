@@ -21,7 +21,7 @@ export default function MovieInfo(props){
         <Row>
           <Title title={props.movie.title} />
         </Row>
-        <Row>
+        <Row className="d-flex justify-content-between">
           <Col xs={4}>
           <FontAwesomeIcon icon={faStar} />{props.movie.vote_average}
             {/* <SubTitleWithIcon icon={'star'} title= /> */}

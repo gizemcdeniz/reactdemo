@@ -12,7 +12,10 @@ export default function TrailerList({data}) {
     });
 
     const style = {
-      marginTop: '15px'
+      marginTop: '15px',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between'
     };
 
     const titleStyle = {

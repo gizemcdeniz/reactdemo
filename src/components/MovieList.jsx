@@ -7,8 +7,9 @@ export default class MovieList extends Component{
 
   render() {
   const style={
-	display: 'flex',
-	flexWrap: 'wrap'
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-between'
   }
 
     let movies = this.props.movies.filter(function(movie) {
