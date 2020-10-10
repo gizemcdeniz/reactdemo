@@ -4,11 +4,17 @@ import SubTitle from './SubTitle'
 import SubTitleWithIcon from './SubTitleWithIcon'
 import Description from './Description'
 import {Row, Col} from 'react-bootstrap'
+import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 
 export default function MovieInfo(props){
   const style = {
     paddingLeft: '15px'
   };
+  
+
 
     return(
       <div style={style}>
@@ -17,10 +23,12 @@ export default function MovieInfo(props){
         </Row>
         <Row>
           <Col xs={4}>
-            <SubTitleWithIcon icon={'star'} title={props.movie.vote_average} />
+          <FontAwesomeIcon icon={faStar} />{props.movie.vote_average}
+            {/* <SubTitleWithIcon icon={'star'} title= /> */}
           </Col>
           <Col xs={4}>
-            <SubTitleWithIcon icon={'heart'} title={props.movie.vote_count} />
+          <FontAwesomeIcon icon={faHeart} /> {props.movie.vote_count} 
+            {/* <SubTitleWithIcon  icon={'heart'} title=/> */}
           </Col>
           <Col xs={4}>
             <SubTitle title={props.movie.release_date.substring(0,4)} />
